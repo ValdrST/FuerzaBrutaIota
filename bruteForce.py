@@ -33,7 +33,7 @@ def martillo(nombre):#esta es la funcion donde se hace el proceso
 				if r.status_code in [300,301,302]: #si regresa estos codigos http significa que cambio de pagina y hay contraseña correcta
 					print("{0} es valida".format(palabra))
 					print(r.status_code)
-					encontrado.write("314144799\n")
+					encontrado.write("usuario again\n")
 					econtrado.write(palabra) #se guarda la contraseña encontrada
 					encontrado.close()
 					break #se acaba la iteracion
