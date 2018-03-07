@@ -6,7 +6,10 @@ import threading
 def martillo(nombre):#esta es la funcion donde se hace el proceso
 	flag = False #bandera necesario
 	diccionario = open(nombre,"r") #se abre el diccionario para solo lectura
-	memoryFinal = open("sav"+nombre,"r+") #se abre el buffer que guarda la ultima contraseña probada
+	try:
+		memoryFinal = open("sav"+nombre,"r+") #se abre el buffer que guarda la ultima contraseña probada
+	except:
+		memoryFinal = open("sav"+nombre,"w") #si no existe el fichero se crea uno nuevo
 	direccion = memoryFinal.readline().strip("\n") #se guarda en la direccion donde esta la ultima contraseña probada
 	print(direccion)
 	if(direccion==""):
