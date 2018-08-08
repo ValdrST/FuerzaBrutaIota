@@ -50,9 +50,8 @@ def martillo(nombre):#esta es la funcion donde se hace el proceso
 		print(encontrado.read())
 		encontrado.close()
 
-def main(): #funcion main que da inicio a todo
+if __name__ == "__main__":
 	for i in range(10): #10 iteraciones
 		hilo = threading.Thread(target=martillo, args=("contras"+str(i)+".txt",)) #se crea un hilo pasando argumentos 
 		hilo.start() #se inicia el hilo
 
-main() #se inicia todo
